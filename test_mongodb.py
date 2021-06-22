@@ -14,11 +14,14 @@ post = {"x":1}
 collection.create_index([('c1',"text")],default_language='english')
 
 results = collection.find({'$text':{'$search':"\"2021/06/22\""}})
-
+r_one = collection.find_one({'$text':{'$search':"\"2021/06/22\""}})
 
 #for db_name in cluster.list_databases():
 #   print(db_name)
 
-for x in results:
-    pprint.pprint(x)
+#for x in results:
+#   pprint.pprint(x)
+print(r_one)
+print(r_one['_id'].generation_time)
+
 
