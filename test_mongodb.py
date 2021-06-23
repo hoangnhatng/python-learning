@@ -13,8 +13,8 @@ post = {"x":1}
 
 collection.create_index([('c1',"text")],default_language='english')
 
-results = collection.find({'$text':{'$search':"\"2021/06/22\""}})
-r_one = collection.find_one({'$text':{'$search':"\"2021/06/22\""}})
+results = collection.find({'$text':{'$search':"\"2021/06/23\""}})
+r_one = collection.find_one({'$text':{'$search':"\"2021/06/23\""}})
 
 #for db_name in cluster.list_databases():
 #   print(db_name)
